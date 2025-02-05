@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.cdnfonts.com/css/harmonyos-sans');
+@import './expression.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'HarmonyOS Sans';
+  src: url('/fonts/HarmonyOS_Sans_Regular.ttf') format('truetype'),
+       url('/fonts/HarmonyOS_Sans_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    font-family: "HarmonyOS Sans", sans-serif !important;
+    background: linear-gradient(87.59deg, #000000 40.52%, #7F1300 190.84%);
+    background-position: center;
+    background-size:cover;
+    // overflow-y: scroll !important;
+    // padding-right: 0px !important;
+    // overflow: auto !important;
+  }
+
+  body .gif-bg{
+    z-index: -5;
+    background-image: url('/images/home/background.gif');
+    background-position: center;
+    background-size: cover;
+    opacity: .3;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(50px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  body .overlay{
+    z-index: -4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #601305;
+    mix-blend-mode: hue
+  }
+  .scroll-block{
+    padding-right: 0px !important;
+    overflow: auto !important;
+  }
+  .Mui-disabled{
+    -webkit-text-fill-color: #D2D2D5 !important;
+  }
+  .blur-effect{
+    backdrop-filter: blur(5px); /* Adjust the blur radius */
+  }
+  .bg-mobile
+  {
+    background: linear-gradient(87.59deg, #000000 40.52%, #7F1300 190.84%);
+    height: calc(100vh - 90px);
+  }
+  .background-active {
+      background-color: rgba(0, 0, 0, 0.5); /* Dim the background */
+  }
+  .navbarOpen{
+    border:unset !important;
+    background-color: unset !important;
+    --tw-gradient-from: unset !important;
+  }
+  .navbarOpenHeaderBg{
+    background: linear-gradient(87.59deg, #000000 40.52%, #7F1300 190.84%)
+  }
+  .border-none{
+    border:unset !important;
+    border-color: unset !important;
+  }
+  .scrollable::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    position: absolute;
+    background-color: transparent !important;
+  }
+  
+  .scrollable::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+  .scrollable::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+  }
+  .drop-menu{
+    background: rgba(65, 65, 65, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+  }
+  .drop-menu-item{
+    background-color: transparent;
+  }
+  .card{
+    background: rgba(65, 65, 65, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+  }
+  .card-header{
+    background: rgba(116, 116, 116, 0.1);
+  }
+  
+  .icon-form{
+    background: rgba(255, 255, 255, 0.01);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    border-radius: 8px;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  .item-list{
+    border-bottom: 0.5px solid #2E2E2E;
+  }
+  .sub-card{
+    background: rgba(153, 153, 153, 0.05);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+  }
+  .footer-bg{
+    background: linear-gradient(87.59deg, #000000 40.52%, #7F1300 190.84%);
+  }
+  .footer{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+    // background: rgba(255, 255, 255, 0.05);
+    // backdrop-filter: blur(25px);
+  }
+  .non-footer{
+    background: unset;
+    backdrop-filter: unset
+  }
+  .footer-boder{
+    border-top: 0.5px solid rgba(46, 46, 46, 0.8);
+  }
+  .footer-fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+  // .avatar-form{
+  //   width: 40px !important;
+  // }
+  @media (max-width: 1280px) {
+    .avatar-form{
+      width: 40px !important;
+    }
+  }
+  
+}
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
+  }
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
+  }
+
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
+  }
+
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
+  }
+
+  input#checkboxLabel:checked ~ .box span {
+    @apply opacity-100;
+  }
+}

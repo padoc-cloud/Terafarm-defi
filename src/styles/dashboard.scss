@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.cdnfonts.com/css/harmonyos-sans');
+@import './expression.scss';
+
+@tailwind components;
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
+  }
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
+  }
+
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
+  }
+
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
+  }
+
+  input#checkboxLabel:checked ~ .box span {
+    @apply opacity-100;
+  }
+  .bg-chart{
+    background: radial-gradient(69.9% 110.16% at 17.58% 4.3%, rgba(46, 167, 255, 0.25) 0%, rgba(28, 27, 51, 0.1) 78.06%);
+    box-shadow: 0px 43.6565px 87.313px rgba(0, 0, 0, 0.08), -43.6565px 43.6565px 87.313px rgba(0, 0, 0, 0.16);
+    backdrop-filter: blur(53.9917px);
+    border-radius: 16px;
+  }
+  .Mui-disabled{
+    -webkit-text-fill-color: #D2D2D5 !important;
+  }
+  .chart-button-form{
+    bottom: 0;
+    background : linear-gradient(180deg,rgba(#7474F2, 0.3) 100%, rgba(116, 116, 242, 1) 50%);
+    height: 78.1px;
+  }
+  .apexcharts-graphical{
+    height: 210px !important;
+  }
+  .apexcharts-canvas{
+    margin-top: 17px !important;
+  }
+  .dashboard-form{
+
+  }
+  .blink_green {
+    // animation: blink-animation 1s steps(1, start) infinite;
+    animation: blink-animation 2s infinite;
+    color: #61C454; /* Set your desired color here */
+  }
+
+  .blink_ember {
+    // animation: blink-animation 1s steps(1, start) infinite;
+    animation: blink-animation 2s infinite;
+    color: #FFBF00; /* Set your desired color here */
+  }
+  .blink_red {
+    // animation: blink-animation 1s steps(1, start) infinite;
+    animation: blink-animation 2s infinite;
+    color: #FF0000; /* Set your desired color here */
+  }
+
+  .blink_card {
+    animation: blink-animation 2s infinite;
+    // opacity: 50%;
+  }
+
+  .total-value-locked{
+    background: linear-gradient(191.21deg, rgba(188, 35, 11, 0.2) -137.64%, rgba(112, 15, 1, 0.2) 119.38%) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  @keyframes blink-animation {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width : 426px) {
+    .dashboard-card{
+      padding: 0px !important;
+      background-color: unset !important;
+      border-radius: unset !important;
+      border:unset !important
+    }
+  }
+
+
+  //  lp token list in dashboard page
+
+  .lp-token-list-item-bg-green {
+    background: rgba(26, 160, 69, 0.4);
+    border: 1px solid transparent;
+    border-top-color: rgba(15, 190, 70, 0.9);
+    border-left-color: rgba(26, 160, 69, 0.9);
+    border-right-color: rgba(26, 160, 69, 0.9);
+  }
+  
+
+  .lp-token-list-item-bg-yellow {
+    background: rgba(255, 191, 0, 0.4);
+    border: 1px solid transparent;
+    border-top-color: rgba(255, 193, 6, 0.9);
+    border-left-color: rgba(255, 191, 0, 0.9);
+    border-right-color: rgba(255, 191, 0, 0.9);
+  }
+
+  .lp-token-list-item-bg-red {
+    background: rgba(237, 28, 36, 0.4);
+    border: 1px solid transparent;
+    border-top-color: rgba(237, 28, 36, 0.9);
+    border-left-color: rgba(237, 28, 36, 0.9);
+    border-right-color: rgba(237, 28, 36, 0.9);
+  }
+}

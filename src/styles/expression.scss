@@ -1,0 +1,19 @@
+.expression {
+  .math-input {
+    margin-right: 10px;
+    margin-left: 10px;
+    min-height: 40px;
+    width: 200px; /* Adjust width as needed */
+    text-align: center;
+    border: 1px solid #000; /* Always show a black border */
+    padding: 2px;           /* Add some padding for better look */
+    outline: none;
+    background-color: white;
+    font-size: 24px;
+    color: black;
+  }
+
+  .math-input:focus{
+    border-color: #007bff;
+  } 
+}

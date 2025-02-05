@@ -1,0 +1,1 @@
+export { TeraCard } from './Card';

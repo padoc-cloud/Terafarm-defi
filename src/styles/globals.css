@@ -1,0 +1,49 @@
+.kQnuna .sc-hIUJlX .sc-dZoequ {
+  position: unset !important;
+}
+
+.kQnuna .sc-hIUJlX .sc-jnOGJG {
+  padding-left: 15px !important;
+}
+
+.kQnuna .sc-hIUJlX .sc-dZoequ svg, .kQnuna .sc-hIUJlX .sc-dZoequ img {
+  height: unset !important;
+}
+
+.send-balance-widget-view {
+  max-width: 100%;
+}
+
+.tokens-balance-dropdown__selected .evm-network-control__arrow-icon {
+      right: 1.1rem;
+}
+
+.dynamic-shadow-dom .dynamic-footer__top-border .powered-by-dynamic {
+  display: none !important;
+}
+
+.dynamic-shadow-dom .dynamic-footer__top-border {
+  border-top: unset !important;
+}
+
+@media screen and (min-width: 768px) {
+  .dynamic-shadow-dom .wallet-list__scroll-container {
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dynamic-shadow-dom .wallet-list__scroll-container {
+    min-height: 280px;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

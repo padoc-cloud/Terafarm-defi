@@ -1,0 +1,158 @@
+
+
+:root {
+    /* General */
+--ck-font-family: Lora; 
+--ck-body-color: #fff; 
+--ck-border-radius: 30px; 
+--ck-overlay-background: rgba(96, 19, 5, 1); 
+--ck-overlay-backdrop-filter: blur(80px); 
+ 
+/* Primary Button */
+--ck-primary-button-color: #ffffff; 
+--ck-primary-button-background: rgba(255, 255, 255, 0.1) !important; 
+--ck-primary-button-box-shadow: 0px 0px 0px 0px #bf7360; 
+--ck-primary-button-border-radius: 21px; 
+--ck-primary-button-font-weight: 500; 
+--ck-primary-button-hover-color: rgba(255, 255, 255, 1); 
+--ck-primary-button-hover-background: rgba(255, 255, 255, 0.2) !important; 
+--ck-primary-button-hover-box-shadow: 0px 0px 0px 0px #896258; 
+--ck-primary-button-active-background: rgba(255, 255, 255, 0.3); 
+--ck-primary-button-active-box-shadow: 0px 0px 0px 0px #bf7360; 
+ 
+/* Secondary Button */
+--ck-secondary-button-color: 
+#ffffff
+; 
+--ck-secondary-button-background: 
+rgba(255, 255, 255, 0.1)
+; 
+--ck-secondary-button-box-shadow: 
+0px 0px 0px 0px #bf7360
+; 
+--ck-secondary-button-border-radius: 
+21px
+; 
+--ck-secondary-button-font-weight: 
+600
+; 
+--ck-secondary-button-hover-color: 
+#ffffff
+; 
+--ck-secondary-button-hover-background: 
+rgba(255, 255, 255, 0.2)
+; 
+--ck-secondary-button-hover-box-shadow: 
+0px 0px 0px 0px #7b2f1c
+; 
+--ck-secondary-button-active-background: 
+rgba(255, 255, 255, 0.4)
+; 
+--ck-secondary-button-active-box-shadow: 
+0px 0px 0px 0px #bf7360
+; 
+ 
+/* Tertiary Button */
+--ck-tertiary-button-color: 
+#ffffff
+; 
+--ck-tertiary-button-background: 
+#fff
+; 
+--ck-tertiary-button-box-shadow: 
+0px 0px 0px 0px #bf7360
+; 
+--ck-tertiary-button-border-radius: 
+21px
+; 
+--ck-tertiary-button-font-weight: 
+500
+; 
+--ck-tertiary-button-hover-color: 
+#ffffff
+; 
+--ck-tertiary-button-hover-background: 
+#7b2f1c
+; 
+--ck-tertiary-button-hover-box-shadow: 
+0px 2px 0px 1px #7b2f1c
+; 
+ 
+/* Modal */
+--ck-modal-box-shadow: 0px 0px 0px 0px #ccb48f; 
+--ck-border-radius: 30px; 
+--ck-body-background: rgba(2, 0, 0, 0.1) !important; 
+--ck-body-background-secondary: #ccb48f; 
+--ck-body-background-tertiary: #ccb48f; 
+ 
+/* Modal Backdrop */
+--ck-overlay-background: rgba(96, 19, 5, 1); 
+/* --ck-overlay-background:  #fff;  */
+
+--ck-overlay-backdrop-filter: blur(80px); 
+ 
+/* Text */
+--ck-font-family: Lora; 
+--ck-body-color: #fff; 
+--ck-body-color-muted: #ffffff; 
+--ck-body-color-muted-hover: #ffffff; 
+--ck-body-color-danger: #ffffff; 
+--ck-body-color-valid: #ffffff; 
+--ck-modal-heading-font-weight: 600; 
+ 
+/* Miscellaneous */
+--ck-focus-color: #ffffff; 
+--ck-body-action-color: #ffffff; 
+--ck-body-divider: #ccb48f; 
+--ck-qr-dot-color: #ffffff; 
+--ck-qr-background: rgba(255, 255, 255, 0.05); 
+--ck-qr-border-color: #ffffff; 
+--ck-qr-border-radius: 21px; 
+--ck-tooltip-color: #ffffff; 
+--ck-tooltip-background: rgba(255, 255, 255, 0.3); 
+--ck-tooltip-background-secondary: rgba(255, 255, 255, 0.3); 
+--ck-tooltip-shadow: 0px 0px 0px 0px #bf7360; 
+--ck-spinner-color: #ffffff; 
+--ck-recent-badge-color: #ffffff; 
+--ck-recent-badge-background: #bf7360; 
+--ck-recent-badge-border-radius: 21px; 
+--ck-body-disclaimer-color: #ffffff; 
+--ck-body-disclaimer-link-color: #ffffff; 
+--ck-body-disclaimer-link-hover-color: #ffffff; 
+--ck-body-disclaimer-background: #ccb48f; 
+ 
+/* Connect Wallet Button */
+--ck-connectbutton-font-size: 
+30px
+; 
+--ck-connectbutton-border-radius: 
+21px
+; 
+--ck-connectbutton-color: 
+#3c3c3c
+; 
+--ck-connectbutton-background: 
+#ebebeb
+; 
+--ck-connectbutton-box-shadow: 
+0px 0px 0px 0px #bf7360
+; 
+--ck-connectbutton-hover-color: 
+rgba(255, 255, 255, 0.1)
+; 
+--ck-connectbutton-hover-background: 
+#e6e6e6
+; 
+--ck-connectbutton-hover-box-shadow: 
+0px 0px 0px 0px #ffffff
+; 
+--ck-connectbutton-active-color: 
+#ffffff
+; 
+--ck-connectbutton-active-background: 
+#fdc8bb
+; 
+--ck-connectbutton-active-box-shadow: 
+0px 0px 0px 0px #bf7360
+;
+}

@@ -1,0 +1,67 @@
+.liquidity-card{
+    background: rgba(65, 65, 65, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+
+}
+.liquidity-card-header{
+    background: rgba(116, 116, 116, 0.1);
+}
+.back-icon-form{
+    background: rgba(255, 255, 255, 0.01);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    border-radius: 8px;
+    left: 24px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.item-list{
+    border-bottom: 0.5px solid #2E2E2E;
+}
+
+  .dashed-border {
+    border-width: 1px; /* Set border width */
+    border-style: solid; /* Use solid border style */
+    border-image: linear-gradient(to right, transparent 50%, #D8DAE5 50%) 0 100%;
+    border-image-slice: 1; /* Use the entire border image */
+  }
+
+  .token-icon-group {
+    display: flex;
+    gap: 2px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 64px;
+  }
+
+  .token-icon-group img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        overflow: clip;
+  }
+  .token-icon-group img:first-child {
+    object-position: 0px 0px;
+  }
+
+  .token-icon-group img:last-child {
+        object-position: 100% 0px;
+  }
+
+  .token-icon-group .token-right-image {
+    position: absolute;
+    left: 20px;
+  }
+
+  @media (max-width: 350px) {
+    .li-btn-form{
+      display: inline !important;
+      width: 80px !important;
+    }
+    .add-button{
+      margin-bottom: 5px;
+      float: right;
+    }
+  }

@@ -1,0 +1,57 @@
+.card{
+  background: rgba(65, 65, 65, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+
+}
+.card-header{
+  background: rgba(116, 116, 116, 0.1);
+}
+
+.back-icon-form{
+  background: rgba(255, 255, 255, 0.01);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border-radius: 8px;
+  left: 24px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.sub-card-farm{
+  display: flex;
+  background: rgba(153, 153, 153, 0.05);
+  /* border: 0.5px solid rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(25px);
+}
+.sub-card-farm-border{
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+.action-form{
+  background: rgba(18, 18, 18, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card-form-bg{
+  background: radial-gradient(50% 50% at 50% 50%, #64266559 6%, #1a101e00 95.06%);
+  backdrop-filter: blur(71.05px);
+}
+
+
+.gradient-border {
+  position: relative;
+  padding: 20px; /* Space inside the border */
+  background-color: white; /* Background color of the element */
+  border-radius: 15px; /* Set the border radius */
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px; /* Match border radius */
+  background: linear-gradient(90deg, #3A873A, transparent, #224E21);
+  z-index: -1; /* Place behind the content */
+  padding: 5px; /* Thickness of the gradient border */
+}

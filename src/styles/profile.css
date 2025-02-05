@@ -1,0 +1,93 @@
+.card{
+  background: rgba(65, 65, 65, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+
+}
+.card-header{
+  background: rgba(116, 116, 116, 0.1);
+}
+
+.icon-form{
+  background: rgba(255, 255, 255, 0.01);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  border-radius: 8px;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.item-list{
+  border-bottom: 0.5px solid #2E2E2E;
+}
+.sub-card{
+  background: rgba(153, 153, 153, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+}
+.action-form{
+  background: rgba(18, 18, 18, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-profile-add{
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  border-radius: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 12px;
+  gap: 4px;
+  margin-top: -37px;
+}
+.hidden-input{
+  bottom: 13px;
+  width: 70px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.css-1qz7y1o {
+  display: none !important; /* Use the appropriate class name based on your build */
+}
+/* CalendarStyles.css */
+.custom-calender-style {
+  background-color: red; /* Background color for the calendar */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 10px 0px 10px !important;
+  box-shadow: unset !important
+}
+.rmdp-right{
+  /* padding: 10px !important */
+}
+.custom-calender-style .react-calendar {
+  border: none; /* Remove default border */
+}
+
+.custom-calender-style .react-calendar__month-view__days__day {
+  padding: 10px; /* Increase padding for days */
+  border-radius: 4px; /* Rounded corners for days */
+  transition: background-color 0.2s; /* Smooth background transition */
+}
+
+.custom-calender-style .react-calendar__month-view__days__day--hover {
+  background-color: rgba(116, 116, 242, 0.2); /* Background color on hover */
+}
+
+.custom-calender-style .react-calendar__month-view__days__day--selected {
+  background-color: #007bff; /* Selected day background */
+  color: white; /* Selected day text color */
+}
+
+.custom-calender-style .react-calendar__month-view__days__day--disabled {
+  background-color: #e0e0e0; /* Disabled day background */
+  color: #a0a0a0; /* Disabled day text color */
+}
+.rmdp-range{
+  background : rgb(147, 207, 242) !important
+}
+
+@media (width: 375px) {
+  .account-address{
+    width:200px;
+  }
+}
