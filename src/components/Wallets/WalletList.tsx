@@ -17,8 +17,6 @@ export function WalletList() {
             });
 
             setConnector(uniqueData as any)
-        } else {
-            setConnector(connectors as any)
         }
     }, [connectors])
     

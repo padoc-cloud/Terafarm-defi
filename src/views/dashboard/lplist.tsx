@@ -25,14 +25,7 @@ const LiquidityPosition: React.FC = () => {
 
   return (
     <>
-      {loading ? (
-        <Skeleton
-          variant="rounded"
-          width={"100%"}
-          height={"35px"}
-          sx={{ backgroundColor: "rgba(255, 255, 255, .2)" }}
-        />
-      ) : (
+      {(
         <>
           <div className="mb-[20px] flex w-full items-center justify-between text-left">
             <Typography
