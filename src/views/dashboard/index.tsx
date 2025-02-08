@@ -27,7 +27,6 @@ import "@/styles/dashboard.scss";
 const Chart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
-const mainUrl = `https://pro-api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&${prams}&precision=5&x_cg_pro_api_key=${process.env.NEXT_PUBLIC_COINGECKO_API_KEY}`;
 
 const Dashboard: React.FC = () => {
   const [showAmount, setShowAmount] = useState(false);
@@ -81,6 +80,7 @@ const Dashboard: React.FC = () => {
         prams = "days=365";
       } else if (per === "All") prams = "days=max";
 
+      const mainUrl = `https://pro-api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&${prams}&precision=5&x_cg_pro_api_key=${process.env.NEXT_PUBLIC_COINGECKO_API_KEY}`;
 
       const options = {
         method: "GET",
