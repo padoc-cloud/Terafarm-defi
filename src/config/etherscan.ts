@@ -1,0 +1,1 @@
+export const transaction_url = (address: string) => (`https://${process.env.NEXT_PUBLIC_EHTERSCAN_NET_URL}/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=0&sort=desc&apikey=${process.env.NEXT_PUBLIC_BSCSCAN_API_KEY}`)
