@@ -3,7 +3,6 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Typography from "@mui/material/Typography";
 import { Card, Tooltip } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import IconButton from "@mui/material/IconButton";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
@@ -11,11 +10,10 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import {
   getPositionsDataByAddress,
-  getPositionsCountByAddress,
 } from "@/libs/positions";
 import Skeleton from "@mui/material/Skeleton";
 import dynamic from "next/dynamic";
-import { useAccount, useCall } from "wagmi";
+import { useAccount } from "wagmi";
 import { parseCurrencyAmount, CurrencyFormat } from "@/utils/Currency";
 import PriceDisplay from "@/components/Common/PriceDisplay";
 import { GetBalances, GetStakedTeracBalance } from "@/libs/GetBalance";

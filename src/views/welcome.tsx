@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { Card, Button } from '@mui/material';
+import { Card } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Image from "next/image";
