@@ -2,7 +2,6 @@
 import type { ButtonProps as MuiButtonProps } from '@mui/material';
 import { Button as MuiButton, alpha, darken } from '@mui/material'; //ButtonProps
 import { styled } from '@mui/material/styles';
-import { constants } from 'fs/promises';
 
 export const ButtonBase = styled(MuiButton)<MuiButtonProps>(({ theme }) => ({
   padding: '24px 32px 24px 32px',
@@ -24,7 +23,7 @@ export const ButtonBase = styled(MuiButton)<MuiButtonProps>(({ theme }) => ({
 }));
 
 export const ButtonPrimary = styled(ButtonBase)<MuiButtonProps>(
-  ({ theme }) => ({
+  () => ({
     color: '#fff',
     backgroundColor:'#4a6cf7',
     ':hover': {
@@ -34,7 +33,7 @@ export const ButtonPrimary = styled(ButtonBase)<MuiButtonProps>(
 );
 
 export const ButtonSecondary = styled(ButtonBase)<MuiButtonProps>(
-  ({ theme }) => ({
+  () => ({
     border: '1px solid #4a6cf7',
     color: '#4a6cf7',
     backgroundColor: '#fff',
@@ -45,7 +44,7 @@ export const ButtonSecondary = styled(ButtonBase)<MuiButtonProps>(
 );
 
 export const WalletListButton = styled(ButtonBase)<MuiButtonProps>(
-  ({ theme }) => ({
+  () => ({
     border: '0.5px solid rgba(255, 255, 255, 0.3)',
     padding: '12px 12px',
     borderRadius: '8px',

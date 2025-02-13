@@ -6,10 +6,7 @@ import { useAccount, useDisconnect } from "wagmi";
 
 const Header = () => {
     // Navbar toggle
-    const [navbarOpen, setNavbarOpen] = useState(false);
-    const navbarToggleHandler = () => {
-        setNavbarOpen(!navbarOpen);
-    };
+    
     const { disconnect, disconnectAsync } = useDisconnect();
     const { isConnected } = useAccount()
 

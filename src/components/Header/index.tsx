@@ -44,13 +44,6 @@ const Header = () => {
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(true);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 90) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
 
   const logOut = () => {
     disconnect();
@@ -62,8 +55,6 @@ const Header = () => {
   const usePathName = usePathname();
 
   const toggleDrawer = (newOpen: boolean) => () => {
-    // document.body.style.height = '100vh !important';
-    // document.body.style.overflow = 'hidden !important';
     document.body.classList.toggle('scroll-block');
     navbarToggleHandler();
     setOpen(newOpen);
