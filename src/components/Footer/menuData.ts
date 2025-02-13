@@ -40,14 +40,6 @@ const menuData: Menu[] = [
     title: "Staking",
     path: "/staking",
     newTab: false,
-  },
-  // {
-  //   id: 5,
-  //   icon1 : '/images/mobile-menu/More-1.svg',
-  //   icon2 : '/images/mobile-menu/More-2.svg',
-  //   title: "More",
-  //   path: "/more",
-  //   newTab: false,
-  // }
+  }
 ];
 export default menuData;
