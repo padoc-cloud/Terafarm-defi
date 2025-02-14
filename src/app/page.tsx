@@ -1,4 +1,3 @@
-
 import { Metadata } from "next";
 import HomeView from "@/views/home";
 import HomeHeader from "@/components/HomeHeader";
