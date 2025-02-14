@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Terafarm | Welcome",
   description: "This is Home for SimplestMath",
-  // other metadata
 };
 
 export default function Home() {
