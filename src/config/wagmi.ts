@@ -1,5 +1,5 @@
 import { createConfig, http, CreateConnectorFn } from "wagmi";
-import { mainnet, sepolia, bsc, bscTestnet } from "wagmi/chains";
+import { bsc, bscTestnet } from "wagmi/chains";
 import { metaMask, walletConnect, coinbaseWallet } from 'wagmi/connectors';
 
 export const chains = [bsc, bscTestnet];

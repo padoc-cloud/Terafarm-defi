@@ -1,4 +1,3 @@
-import { ethers } from "ethers";
 import { POOL_FACTORY_CONTRACT_ADDRESS } from "@/libs/constants";
 import JSBI from "jsbi";
 import { computePoolAddress } from "@uniswap/v3-sdk";

@@ -1,17 +1,16 @@
 "use client";
+
 import * as React from 'react';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import { Card } from '@mui/material';
-import { useRouter } from "next/navigation";
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import Link from 'next/link';
 
 import "@/styles/state.css";
 
 const Failed: React.FC = () => {
-  const router = useRouter();
   
   return (
     <div className="flex items-center justify-center grow w-full text-black dark:text-white mt-[130px] mb-[30px]">

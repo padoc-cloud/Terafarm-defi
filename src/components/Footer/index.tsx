@@ -1,13 +1,11 @@
 "use client";
 import * as React from 'react';
-import { useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import menuData from "./menuData";
 
 const Footer = () => {
@@ -16,12 +14,7 @@ const Footer = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  const preventScroll = (event: WheelEvent | TouchEvent | KeyboardEvent) => {
-      event.preventDefault();
-  };
-
   const toggleDrawer = (newOpen: boolean) => () => {
-    // document.body.style.height = '100vh !important';
     document.body.style.overflow = 'hidden !important';
     setOpen(newOpen);
   };
@@ -29,10 +22,6 @@ const Footer = () => {
   const Drawerbox = (
     <Box
       sx={{
-        // width: '120px',
-        // position :'relative',
-        // background: 'transparent',
-        // boxShadow:'unset !important',
         height:'100%'
       }}
       role="presentation" onClick={toggleDrawer(false)}>

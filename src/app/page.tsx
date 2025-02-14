@@ -1,6 +1,5 @@
 
 import { Metadata } from "next";
-import Image from "next/image";
 import HomeView from "@/views/home";
 import HomeHeader from "@/components/HomeHeader";
 import Footer from "@/components/Footer";

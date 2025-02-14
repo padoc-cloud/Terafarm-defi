@@ -1,59 +1,9 @@
 import { FeeAmount, Pool, Position } from "@uniswap/v3-sdk";
 import { Token } from "@uniswap/sdk-core";
-import { BigNumber } from "ethers";
 import { getPoolInfo } from "./pool";
 import JSBI from "jsbi";
 const COINGECKOURL = (addr: string) =>
   `https://pro-api.coingecko.com/api/v3/simple/token_price/binance-smart-chain?contract_addresses=${addr}&vs_currencies=usd&x_cg_pro_api_key=CG-w9KjR3DD7xNKsP4cA833YyvC`;
-
-// Cache for token prices
-const priceCache: { [key: string]: { price: number; timestamp: number } } = {};
-const CACHE_DURATION = 3 * 60 * 1000; // 5 minutes
-
-async function fetchTokenPrices1(t0Address: string, t1Address: string) {
-  const now = Date.now();
-
-  // Check if prices are cached and recent
-  if (
-    priceCache[t0Address]?.timestamp > now - CACHE_DURATION &&
-    priceCache[t1Address]?.timestamp > now - CACHE_DURATION
-  ) {
-    return {
-      priceToken0InUSD: priceCache[t0Address].price,
-      priceToken1InUSD: priceCache[t1Address].price,
-    };
-  }
-
-  try {
-    const [response0, response1] = await Promise.all([
-      fetch(COINGECKOURL(t0Address), {
-        method: "GET",
-        headers: { accept: "application/json" },
-      }),
-      fetch(COINGECKOURL(t1Address), {
-        method: "GET",
-        headers: { accept: "application/json" },
-      }),
-    ]);
-
-    const token0PriceData = await response0.json();
-    const token1PriceData = await response1.json();
-
-    const priceToken0InUSD = token0PriceData[t0Address.toLowerCase()].usd;
-    const priceToken1InUSD = token1PriceData[t1Address.toLowerCase()].usd;
-
-    // Update cache
-    priceCache[t0Address] = { price: priceToken0InUSD, timestamp: now };
-    priceCache[t1Address] = { price: priceToken1InUSD, timestamp: now };
-
-    return { priceToken0InUSD, priceToken1InUSD };
-  } catch (error) {
-    console.error("Error fetching token prices:", error);
-    // Handle the error appropriately (e.g., re-throw, return default values)
-    // throw error;
-    return { priceToken0InUSD: 0, priceToken1InUSD: 0 };
-  }
-}
 
 // Fetch token prices in USD from CoinGecko (or another source)
 async function fetchTokenPrices(t0Address: string, t1Address: string) {

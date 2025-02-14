@@ -1,4 +1,3 @@
-import { blueGrey } from '@mui/material/colors';
 
 export const lightPaletteText = {
     primary: 'rgb(17, 24, 39)',

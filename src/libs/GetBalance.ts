@@ -1,10 +1,9 @@
-import { type BaseError, useReadContract, useAccount } from 'wagmi'
+import { useReadContract } from 'wagmi'
 import { config } from "@/config/wagmi";
 import { tokenItem } from '@/types/tokenItem';
 import gynxAbi from "@/config/abi/gynx.abi.json";
 import teracAbi from "@/config/abi/terac.abi.json";
 import stakingAbi from "@/config/abi/staking.abi.json";
-import FarmingAbi from "@/config/abi/farming.abi.json";
 import { tokenDisplayFormat, parseCurrencyAmount, CurrencyFormat } from '@/utils/Currency';
 
 export function GetBalances(address : string) {

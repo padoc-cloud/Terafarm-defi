@@ -2,6 +2,7 @@ import { useMessageAnimation } from "@/hooks/useMessageAnimation";
 import { MessageItem } from "@/types/menu";
 import { Typography } from '@mui/material';
 import Image from "next/image";
+
 import { WalletAddressFormat } from "@/utils/format";
 
 const ShowMessagecomponent = ({ msg1, msg2 }: { msg1: MessageItem, msg2: MessageItem }) => {
