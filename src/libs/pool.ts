@@ -1,11 +1,12 @@
-import { ethers } from "ethers";
-import { CurrentConfig, Pools, rpcUrl } from "@/config/UniswapConfig";
 import IUniswapV3PoolABI from "@uniswap/v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json";
-import { POOL_FACTORY_CONTRACT_ADDRESS } from "@/libs/constants";
+
+import { ethers } from "ethers";
 import { FeeAmount } from "@uniswap/v3-sdk";
 import { Token } from "@uniswap/sdk-core";
-
 import { computePoolAddress } from "@uniswap/v3-sdk";
+
+import { CurrentConfig, Pools } from "@/config/UniswapConfig";
+import { POOL_FACTORY_CONTRACT_ADDRESS } from "@/libs/constants";
 
 export async function getPoolInfo({
   tokenA,

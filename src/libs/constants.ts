@@ -1,6 +1,6 @@
 // This file stores web3 related constants such as addresses, token definitions, ETH currency references and ABI's
 
-import { ChainId, Token, Ether } from "@uniswap/sdk-core";
+import { ChainId, Token } from "@uniswap/sdk-core";
 
 // Addresses
 export const POOL_FACTORY_CONTRACT_ADDRESS =

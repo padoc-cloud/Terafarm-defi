@@ -1,14 +1,16 @@
+import INONFUNGIBLE_POSITION_MANAGER from "@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json";
+import FarmingAbi from "@/config/abi/farming.abi.json";
+
 import {
   useWaitForTransactionReceipt,
   useWriteContract,
   usePublicClient,
   useAccount,
 } from "wagmi";
-import INONFUNGIBLE_POSITION_MANAGER from "@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json";
-import FarmingAbi from "@/config/abi/farming.abi.json";
-import { config } from "@/config/wagmi";
-import { useGetApproved } from "./useGetApproved";
 import { parseEther } from "viem";
+
+import { useGetApproved } from "./useGetApproved";
+import { config } from "@/config/wagmi";
 
 const useLpTokenStake = () => {
   const {

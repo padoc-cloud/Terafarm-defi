@@ -70,12 +70,3 @@ const useNFT: any = (change: boolean, switched: boolean) => {
   return { nftTokenList, loading, error };
 };
 export default useNFT;
-
-export const useStakeToken: any = (change: boolean) => {
-  const { address, isConnected } = useAccount();
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [nftTokenList, setNftTokenList] = useState<NFT[]>([]);
-
-  useEffect(() => {}, [isConnected, change]);
-};

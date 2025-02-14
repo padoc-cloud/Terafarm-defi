@@ -24,7 +24,6 @@ export const useGetApproved = () => {
         if (allowance) {
             return allowance;
         } else {
-            // await approveTokens(tokenAddress, operatorAddress, tokenId, abi);
             const res = await writeContract(config, {
                 address: tokenAddress as `0x${string}`,
                 abi: abi || erc721Abi,
