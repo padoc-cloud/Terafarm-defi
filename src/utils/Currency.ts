@@ -1,4 +1,3 @@
-import { CurrencyAmount } from "@uniswap/sdk-core"
 
 export const CurrencyUSDFormat = (value : number) => {
     return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);

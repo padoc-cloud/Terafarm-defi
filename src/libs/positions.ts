@@ -1,10 +1,12 @@
-import { ethers } from "ethers";
 import INONFUNGIBLE_POSITION_MANAGER from "@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json";
 import { NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS } from "./constants";
-import { rpcUrl, TokenDatabyAddress } from "@/config/UniswapConfig";
-import { calculateLiquidityValueInUSD } from "./Liquidity";
+
+import { ethers } from "ethers";
 import JSBI from "jsbi";
 import { Token } from "@uniswap/sdk-core";
+
+import { rpcUrl, TokenDatabyAddress } from "@/config/UniswapConfig";
+import { calculateLiquidityValueInUSD } from "./Liquidity";
 
 const nfpmContract = new ethers.Contract(
   NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS,

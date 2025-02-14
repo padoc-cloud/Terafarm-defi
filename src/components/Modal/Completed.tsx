@@ -1,10 +1,12 @@
+import Image from 'next/image';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
-import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
-import "@/styles/state.css";
+
 import { ITransactionDetail } from '@/types/transaction';
+
+import "@/styles/state.css";
 
 const style = {
     position: 'absolute',

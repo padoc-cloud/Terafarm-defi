@@ -1,4 +1,5 @@
 "use client";
+
 import * as React from 'react';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
@@ -8,14 +9,14 @@ import Chip from '@mui/material/Chip';
 
 import "@/styles/state.css";
 
-const Completed: React.FC = () => {
-  const transaction_detail = {
-    amount: '+USDT5623',
-    date: '05.12pm . 12/09/23',
-    type: 'Staking',
-    status: 'Successful'
-  }
+const transaction_detail = {
+  amount: '+USDT5623',
+  date: '05.12pm . 12/09/23',
+  type: 'Staking',
+  status: 'Successful'
+}
 
+const Completed: React.FC = () => {
   return (
     <div className="flex items-center justify-center grow w-full text-black dark:text-white mt-[130px] mb-[30px]">
       <div className="container">

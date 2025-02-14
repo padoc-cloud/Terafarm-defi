@@ -1,4 +1,5 @@
-import { ChainId } from '@uniswap/sdk-core'
+import { ChainId } from '@uniswap/sdk-core';
+
 export function chainIdToNetworkName(networkId: ChainId) {
     switch (networkId) {
         case ChainId.MAINNET:

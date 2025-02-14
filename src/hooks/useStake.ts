@@ -1,14 +1,16 @@
+import TeracAbi from "@/config/abi/terac.abi.json";
+import StakingAbi from "@/config/abi/staking.abi.json";
+
 import {
   useWaitForTransactionReceipt,
   useWriteContract,
   usePublicClient,
   useAccount,
 } from "wagmi";
-import { useAllowance } from "./useAllowance";
-import TeracAbi from "@/config/abi/terac.abi.json";
-import StakingAbi from "@/config/abi/staking.abi.json";
-import { config } from "@/config/wagmi";
 import { parseEther } from "viem";
+
+import { config } from "@/config/wagmi";
+import { useAllowance } from "./useAllowance";
 
 export const useStake = () => {
   const {
