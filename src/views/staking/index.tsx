@@ -1,17 +1,14 @@
 "use client";
+
 import React, { useState, useEffect, useCallback } from "react";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 import { Card, Button } from "@mui/material";
-import { usePublicClient, useAccount, type BaseError, useCall } from "wagmi";
+import { parseUnits } from "viem";
+import { usePublicClient, useAccount, type BaseError } from "wagmi";
+
 import { CurrencyFormat } from "@/utils/Currency";
 import { useStake } from "@/hooks/useStake";
-import { GYNX_TOKEN, TERAC_TOKEN } from "@/libs/constants";
-import { config } from "@/config/wagmi";
-import TeracAbi from "@/config/abi/terac.abi.json";
-import StakingAbi from "@/config/abi/staking.abi.json";
-import "@/styles/staking.css";
-import { parseUnits } from "viem";
 import CompletedModal from "@/components/Modal/Completed";
 import FailedModal from "@/components/Modal/Failed";
 import { ITransactionDetail } from "@/types/transaction";
@@ -21,6 +18,13 @@ import { MessageItem } from "@/types/menu";
 import { useSocket } from "@/contexts/SocketContext";
 import { generateUUID } from "@/utils/uuid";
 
+import { GYNX_TOKEN, TERAC_TOKEN } from "@/libs/constants";
+import { config } from "@/config/wagmi";
+import TeracAbi from "@/config/abi/terac.abi.json";
+import StakingAbi from "@/config/abi/staking.abi.json";
+
+import "@/styles/staking.css";
+
 const Staking: React.FC = () => {
   const [stakeAmount, setStakeAmount] = useState<number>(0);
   const [unstakeAmount, setUnstakeAmount] = useState<number>(0);
@@ -29,7 +33,6 @@ const Staking: React.FC = () => {
   const [actionState, setActionState] = useState<number>(0);
   const [terac_balace, setTeracBalace] = useState<number>(0);
   const [teracStakedBalance, setTeracStakedBalance] = useState<number>(0);
-  const [showMessage, setShowMessage] = useState<string>("");
   const [rewardAmount, setRewardAmount] = useState<number>(0);
   const [open, setOpen] = useState<boolean>(false);
   const [openFailedModal, setOpenFailedModal] = useState<boolean>(false);
@@ -37,10 +40,11 @@ const Staking: React.FC = () => {
   const [successData, setSuccessData] = useState<ITransactionDetail>(
     {} as ITransactionDetail,
   );
+
   const { address } = useAccount();
-  const client = usePublicClient({
-    config,
-  });
+
+  const client = usePublicClient({ config });
+
   const {
     stake,
     unstake,
@@ -60,6 +64,7 @@ const Staking: React.FC = () => {
     apprErr,
     apprHash,
   } = useStake();
+  
   const { socket } = useSocket();
 
   const getRewards = useCallback(async () => {
@@ -212,16 +217,6 @@ const Staking: React.FC = () => {
     apprHash,
     getRewards
   ]);
-
-  useEffect(() => {
-    if (error && error?.message.includes("0xfb8f41b2")) {
-      setShowMessage("");
-    } else {
-      setShowMessage(
-        (error as BaseError)?.shortMessage || (error?.message as string),
-      );
-    }
-  }, [error]);
 
   useEffect(() => {
     const trans = async () => {
