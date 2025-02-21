@@ -1,8 +1,8 @@
 {
-  "name": "Terafarm-Dex",
+  "name": "DeFi-Frontend",
   "version": "0.1.0",
   "private": true,
-  "author": "padoc-cloud",
+  "author": "TalentedScDev",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
